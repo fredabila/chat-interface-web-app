@@ -9,8 +9,9 @@ document.getElementById('user-details-form').addEventListener('submit', function
     localStorage.setItem('userGender', userGender);
     localStorage.setItem('bKey', bKey);
     
-    document.getElementById('user-details-form').style.display = 'none';
+    document.getElementById('user-details').style.display = 'none';
     document.getElementById('chat-form').style.display = 'flex';
+    loadChatHistory();
 });
 
 document.getElementById('chat-form').addEventListener('submit', function(event) {
@@ -56,6 +57,11 @@ document.getElementById('chat-form').addEventListener('submit', function(event) 
     });
 });
 
+document.getElementById('reset-chat').addEventListener('click', function() {
+    document.getElementById('chat-history').innerHTML = '';
+    saveChatHistory();
+});
+
 function addMessageToHistory(sender, message) {
     const chatHistory = document.getElementById('chat-history');
     const messageDiv = document.createElement('div');
@@ -63,4 +69,33 @@ function addMessageToHistory(sender, message) {
     messageDiv.textContent = message;
     chatHistory.appendChild(messageDiv);
     chatHistory.scrollTop = chatHistory.scrollHeight;
+    saveChatHistory();
+}
+
+function saveChatHistory() {
+    const chatHistory = document.getElementById('chat-history').innerHTML;
+    localStorage.setItem('chatHistory', chatHistory);
+    updateHistoryList();
+}
+
+function loadChatHistory() {
+    const chatHistory = localStorage.getItem('chatHistory');
+    if (chatHistory) {
+        document.getElementById('chat-history').innerHTML = chatHistory;
+    }
+}
+
+function updateHistoryList() {
+    const historyList = document.getElementById('history-list');
+    historyList.innerHTML = '';
+    const chatHistory = localStorage.getItem('chatHistory');
+    if (chatHistory) {
+        const listItem = document.createElement('div');
+        listItem.classList.add('history-item');
+        listItem.textContent = 'Chat History';
+        listItem.addEventListener('click', function() {
+            loadChatHistory();
+        });
+        historyList.appendChild(listItem);
+    }
 }

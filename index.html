@@ -7,20 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="chat-container">
-        <div class="user-details">
-            <form id="user-details-form">
-                <input type="text" id="user-name" placeholder="Enter your name" required>
-                <input type="text" id="user-gender" placeholder="Enter your gender" required>
-                <input type="text" id="b-key" placeholder="Enter your B-key" required>
-                <button type="submit">Save Details</button>
-            </form>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>Chat Histories</h2>
+            <div id="history-list"></div>
         </div>
-        <div class="chat-history" id="chat-history"></div>
-        <form id="chat-form" style="display: none;">
-            <input type="text" id="chat-input" placeholder="Type your message..." required>
-            <button type="submit">Send</button>
-        </form>
+        <div class="chat-container">
+            <header>
+                <h1>Welcome to Buzzchat</h1>
+                <p>Chat with our AI bot using your unique B-key.</p>
+            </header>
+            <div class="user-details" id="user-details">
+                <form id="user-details-form">
+                    <input type="text" id="user-name" placeholder="Enter your name" required>
+                    <input type="text" id="user-gender" placeholder="Enter your gender" required>
+                    <input type="text" id="b-key" placeholder="Enter your B-key" required>
+                    <button type="submit" class="button">Save Details</button>
+                </form>
+            </div>
+            <div class="chat-section" id="chat-section">
+                <div class="chat-history" id="chat-history"></div>
+                <form id="chat-form" style="display: none;">
+                    <input type="text" id="chat-input" placeholder="Type your message..." required>
+                    <button type="submit" class="button">Send</button>
+                    <button type="button" id="reset-chat" class="button button-reset">Reset Chat</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
