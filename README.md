@@ -29,7 +29,7 @@ Follow these instructions to set up and run the chat interface on your local mac
 
 1. **Clone the Repository**: Clone this repository to your local machine using the following command:
     ```sh
-    git clone https://github.com/your-username/chat-interface-web-app.git
+    git clone https://github.com/fredabila/chat-interface-web-app.git
     ```
 
 2. **Navigate to the Project Directory**:
@@ -86,6 +86,6 @@ This project is open-source and available under the MIT License.
 
 If you have any questions or need further assistance, please contact:
 
-- Email: [your-email@example.com](mailto:your-email@example.com)
-- GitHub: [your-github-username](https://github.com/your-github-username)
+- Email: [frederick@buzzchat.site](mailto:frederick@buzzchat.site)
+- GitHub: [fredabila](https://github.com/fredabila)
 
