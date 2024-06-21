@@ -45,6 +45,18 @@ Follow these instructions to set up and run the chat interface on your local mac
 2. **Save Details**: Click the "Save Details" button to store the information locally.
 3. **Start Chatting**: After saving your details, you can start typing messages into the chat input box and press "Send" to interact with the AI bot.
 
+## Demo
+
+You can view a live demo of the chat interface here:
+
+[![View Demo](https://img.shields.io/badge/View-Demo-brightgreen)](http://demo-chat.buzzchat.site/)
+
+## Deployment
+
+To deploy this project to Vercel, click the button below:
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/fredabila/chat-interface-web-app)
+
 ## Customization
 
 You can customize the chat interface to better suit your needs. Here are some ways to customize it:
@@ -88,4 +100,3 @@ If you have any questions or need further assistance, please contact:
 
 - Email: [frederick@buzzchat.site](mailto:frederick@buzzchat.site)
 - GitHub: [fredabila](https://github.com/fredabila)
-
